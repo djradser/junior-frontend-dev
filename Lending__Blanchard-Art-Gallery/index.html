@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blanchard Художественная галерея</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/simplebar.css">
+  <link rel="stylesheet" href="./css/choices.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <div class="first-menu-bkg">
+        <div class="container first-menu__container">
+        <div class="first-menu">
+          <button class="header__burger" aria-label="Открыть меню">
+            <span></span>
+          </button>
+            <picture class="logo">
+              <source srcset="./img/Blanchard-logo-tablet.svg" media="(min-width: 577px) and (max-width: 1200px)">
+              <source srcset="./img/Blanchard-logo-mobile.svg" media="(max-width: 576px)">
+              <img src="./img/Blanchard-logo.svg" alt="Лого Blanchard">
+            </picture>
+          <nav id="header__nav" class="nav header__nav">
+            <ul class="header__nav-list"> 
+              <li class="header__nav-item">
+                <a href="#about-us" class="header__nav-link">О нас</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#gallery" class="header__nav-link">Галерея</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#catalog" class="header__nav-link">Каталог</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#events" class="header__nav-link">События</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#editions" class="header__nav-link">Издания</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#projects" class="header__nav-link">Проекты</a>
+              </li>
+              <li class="header__nav-item">
+                <a href="#contacts" class="header__nav-link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#" aria-label="Войти" class="enter-image-link">Войти</a>
+          <form class="header__search-mobile">
+            <input type="text" placeholder="" class="header__search-mobile-input">
+            <button type="submit" class="header__search-mobile-button"></button>
+          </form>
+          <button type="button" class="search__cross" aria-label="Закрыть поиск"></button>
+        </div>
+        </div>
+      </div>
+      <div class="second-menu-bkg">
+        <div class="container second-menu__container">
+          <div class="second-menu">
+            <nav class="nav header__menu">
+              <ul class="header__menu-list"> 
+                <li class="header__menu-item">
+                  <button type="button" class="header__menu-button menu__link--drop">Реализм</button>
+                  <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Тинторетто</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Фридрих</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Леонардо</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Верроккьо</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Мане</a>
+                    </li>
+                  </ul> 
+                </li>
+                <li class="header__menu-item">
+                  <button type="button" class="header__menu-button menu__link--drop">Импрессионизм</button>
+                  <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Моне</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Ренуар</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Дега</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Сезанн</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Матисс</a>
+                    </li>
+                  </ul> 
+                </li>
+                <li class="header__menu-item">
+                  <button type="button" class="header__menu-button menu__link--drop">Постимпрессионизм</button>
+                  <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Ван Гог</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Гоген</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Пикассо</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Сёра</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Тулуз-Лотрек</a>
+                    </li>
+                  </ul> 
+                </li>
+                <li class="header__menu-item">
+                  <button type="button" class="header__menu-button menu__link--drop">Авангард</button>
+                  <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Малевич</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Бранкузи</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Пиросмани</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Татлин</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Гончарова</a>
+                    </li>
+                  </ul> 
+                </li>
+                <li class="header__menu-item">
+                  <button type="button" class="header__menu-button menu__link--drop">Футуризм</button>
+                  <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Боччони</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Джакомо</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Северини</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Карра</a>
+                    </li>
+                    <li class="dropdown-list__item">
+                      <a href="#" class="dropdown-list__link">Экстер</a>
+                    </li>
+                  </ul> 
+                </li>
+              </ul>
+            </nav>
+            <form tabindex="0" class="header__search">
+              <input type="text" placeholder="Поиск по сайту" class="header__search-input">
+              <button type="submit" class="header__search-button"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section-hero">
+      <div class="section-hero__bkg"></div>
+      <div class="container section-hero__container">
+          <div class="section-hero__content">
+            <h1 class="section-hero__heading">
+              Прикоснитесь к прекрасному
+            </h1>
+            <p class="section-hero__description">
+              Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
+            </p>
+            <a role="button" aria-label="Подписаться на рассылку" href="#footer" class="section-hero__btn">
+              Подписаться на рассылку
+            </a>
+          </div>
+        </div>
+    </section>
+    <section class="section-about-us" id="about-us">
+      <div class="container section-about-us__container">
+        <h2 class="section-heading">
+          О нас
+        </h2>
+        <p class="section-about-us__info">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
+        </p>
+      </div>
+    </section>
+    <section class="section-gallery" id="gallery">
+      <div class="container section-gallery__container">
+        <div class="section-gallery__left-container">
+          <h2 class="section-heading section-gallery__heading">
+            Галерея
+          </h2>
+          <p class="select-description">Фильтровать по:</p>
+          <select name="Автор" id="selectCustom">
+            <option value="Автор"></option>
+            <option value="Направление"></option>
+            <option value="Техника"></option>
+          </select>
+          <p class="gallery-description">
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <span class="text-highlighting">авторизуйтесь,</span> либо воспользуйтесь лицензией. 
+          </p>
+        </div>
+        <div class="wrapper">
+          <div class="image-slider swiper-container">
+            <div class="image-slider__wrapper swiper-wrapper">
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/1.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/1.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/1.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/1.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/2.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/2.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/2.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/2.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/3.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/3.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/3.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/3.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/4.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/4.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/4.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/4.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/5.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/5.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/5.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/5.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/6.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/6.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/6.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/6.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/7.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/7.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/7.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/7.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/8.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/8.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/8.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/8.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/9.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/9.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/9.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/9.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/10.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/10.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/10.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/10.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/11.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/11.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/11.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/11.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/12.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/12.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/12.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/12.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/13.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/13.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/13.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/13.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/14.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/14.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/14.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/14.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/15.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/15.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/15.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/15.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/16.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/16.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/16.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/16.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/17.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/17.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/17.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/17.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/18.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/18.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/18.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/18.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/19.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/19.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/19.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/19.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/20.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/20.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/20.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/20.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/21.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/21.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/21.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/21.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/22.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/22.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/22.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/22.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/23.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/23.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/23.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/23.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/24.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/24.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/24.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/24.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/25.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/25.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/25.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/25.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/26.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/26.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/26.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/26.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/27.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/27.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/27.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/27.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/28.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/28.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/28.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/28.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/29.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/29.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/29.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/29.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+              <div class="image-slider__slide swiper-slide">
+                <div class="image-slider__image">
+                  <picture>
+                    <source srcset="./img/Gallery/1024/30.png" media="(min-width: 993px) and (max-width: 1200px)">
+                    <source srcset="./img/Gallery/768/30.png" media="(min-width: 577px) and (max-width: 992px)">
+                    <source srcset="./img/Gallery/320/30.png" media="(max-width: 576px)">
+                    <img src="./img/Gallery/1920/30.png" alt="Картина">
+                  </picture>
+                </div>
+                <div class="gallery-hover"></div>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <p class="gallery-description__mobile">
+          Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <span class="text-highlighting">авторизуйтесь,</span> либо воспользуйтесь лицензией. 
+        </p>
+      </div>
+    </section>
+    <section class="section-catalog" id="catalog"></section>
+    <section class="section-events" id="events"></section>
+    <section class="section-editions" id="editions"></section>
+    <section class="section-projects" id="projects"></section>
+    <section class="section-contacts" id="contacts"></section>
+  </main>
+  <footer id="footer" class="footer"></footer>
+  <script src="./js/simplebar.js"></script>
+  <script src="./js/choices.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script defer src="./js/main.js"></script>
+</body>
+</html>
