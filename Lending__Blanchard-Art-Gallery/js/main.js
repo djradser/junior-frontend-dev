@@ -42,12 +42,65 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   };
-  // Gallery-select
+  // Селект в секции "Галерея"
   const element = document.querySelector('#selectCustom');
   const choices = new Choices(element, {
     searchEnabled: false
   });
 
+  // Табы в секции "Каталог" для смены стран
+  let jsTriggers = document.querySelectorAll('.js-tab-trigger');
+
+  jsTriggers.forEach(function (item, i) {
+    item.addEventListener('click', function() {
+      let tabName = this.dataset.tab;
+          tabContent = document.querySelector('.js-tab-content[data-tab="'+tabName+'"]');
+
+          document.querySelectorAll('.js-tab-content.tab-content-active').forEach(function(item, i) {
+            item.classList.remove('tab-content-active');
+          });
+
+          document.querySelectorAll('.js-tab-trigger.active').forEach(function(item, i) {
+            item.classList.remove('active');
+          });
+          
+          tabContent.classList.add('tab-content-active');
+            this.classList.add('active')
+    });
+  })
+
+  // Табы в секции "Каталог" для аккордеона
+  document.querySelectorAll('.accordion-btn').forEach(function(accordionBtn) {
+    accordionBtn.addEventListener('click', function (event) {
+      const track = event.currentTarget.dataset.track
+
+      document.querySelectorAll('.tab-content__left').forEach(function(tabContentLeft) {
+        tabContentLeft.classList.remove('tab-content__left-active')
+      });
+
+      document.querySelector(`[data-toggle="${track}"]`).classList.add('tab-content__left-active')
+    });
+  });
+
+  // Аккордеон в секции "Каталог"
+  const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
+  accordionItemHeaders.forEach(accordionItemHeader => {
+    accordionItemHeader.addEventListener("click", event => {
+      const currentlyActiveaccordionItemHeader = document.querySelector(".accordion-item-header.active");
+      if(currentlyActiveaccordionItemHeader && currentlyActiveaccordionItemHeader!==accordionItemHeader) {
+        currentlyActiveaccordionItemHeader.classList.toggle("active");
+        currentlyActiveaccordionItemHeader.nextElementSibling.style.maxHeight = 0;
+      }
+      accordionItemHeader.classList.toggle("active");
+      const accordionItemBody = accordionItemHeader.nextElementSibling;
+      if(accordionItemHeader.classList.contains("active")) {
+        accordionItemBody.style.maxHeight = accordionItemBody.scrollHeight + "px";
+      }
+      else {
+        accordionItemBody.style.maxHeight = 0;
+      }
+    });
+  });
 });
 
 // Swiper-initializing
