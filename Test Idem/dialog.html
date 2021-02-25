@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialog</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/dialog.css">
+</head>
+<body>
+  <div class="section-dialog">
+      <div class="dialog__container">
+        <p class="date-info">21 октября 2017</p>
+        <div class="messages__container">
+          <img class="dialog-face-first" src="./img/dialog-face.png" alt="Иконка пользователя">
+          <img class="dialog-face-second" src="./img/dialog-face.png" alt="Иконка пользователя">
+          <img class="dialog-face-third" src="./img/dialog-face.png" alt="Иконка пользователя">
+          <img class="dialog-face-fourth" src="./img/dialog-face.png" alt="Иконка пользователя">
+          <img class="dialog-face-fifth" src="./img/dialog-face.png" alt="Иконка пользователя">
+          <img class="first-message-img" src="./img/first-message-img.png" alt="Первое сообщение">
+          <img class="second-message-img" src="./img/second-message-img.png" alt="Второе сообщение">
+          <img class="third-message-img" src="./img/third-message-img.png" alt="Третье сообщение">
+          <img class="fourth-message-img" src="./img/fourth-message-img.png" alt="Четвёртое сообщение">
+          <img class="fifth-message-img" src="./img/fifth-message-img.png" alt="Пятое сообщение">
+        </div>
+        <form action="https://jsonplaceholder.typicode.com/posts" method="POST" class="input__container">
+          <label class="label-submit-message">
+            <span class="visually-hidden">
+              Введите текст сообщения
+            </span>
+            <textarea aria-label="Введите текст сообщения" class="submit-message-item" name="text" placeholder="Сообщение"></textarea>
+          </label>
+          <button type="submit" aria-label="Отправить сообщение" class="submit-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

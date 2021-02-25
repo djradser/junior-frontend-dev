@@ -1,0 +1,249 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'), url('../fonts/roboto-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto_Sans';
+  src: url('../fonts/notosans-regular-webfont.woff2') format('woff2'), url('../fonts/notosans-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima_novabold';
+  src: url('../fonts/proximanova-bold-webfont.woff2') format('woff2'), url('../fonts/proximanova-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+textarea {
+  font-family: 'Noto_Sans', sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  color: #696969;
+}
+
+.section-dialog {
+  position: relative;
+  margin: auto;
+  height: 883px;
+  width: 980px;
+  background-color: #FFF;
+}
+
+.dialog__container {
+  position: absolute;
+  margin: 46px 164px 80px 165px;
+  width: 651px;
+  height: 757px;
+  background-image: url(../img/dialog-bkg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+/* Дата сообщения */
+.date-info {
+  position: absolute;
+  top: 331px;
+  left: -1px;
+  margin: 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+  overflow: hidden;
+}
+
+.date-info:before,
+.date-info:after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 1px;
+  background: #DBDBDB;
+}
+
+.date-info:before {
+  margin-left: -62%;
+  margin-right: 15px;
+}
+
+.date-info:after {
+  margin-right: -100%;
+  margin-left: 28.8px;
+}
+
+/* Блок сообщений */
+.messages__container {
+  position: relative;
+  padding: 41px 36px 29px 15px;
+  height: 446px;
+  border-bottom: 1px solid #DBDBDB;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.dialog-face-first {
+  position: absolute;
+  top: 41px;
+  left: 15px;
+}
+
+.dialog-face-second {
+  position: absolute;
+  top: 203px;
+  right: 19px;
+}
+
+.dialog-face-third {
+  position: absolute;
+  top: 269px;
+  left: 15px;
+}
+
+.dialog-face-fourth {
+  position: absolute;
+  top: 375px;
+  right: 19px;
+}
+
+.dialog-face-fifth {
+  position: absolute;
+  top: 441px;
+  left: 15px;
+}
+
+.first-message-img {
+  position: absolute;
+  top: 41px;
+  left: 73px;
+}
+
+.second-message-img {
+  position: absolute;
+  top: 203px;
+  right: 77px;
+}
+
+.third-message-img {
+  position: absolute;
+  top: 269px;
+  left: 73px;
+}
+
+.fourth-message-img {
+  position: absolute;
+  top: 375px;
+  right: 77px;
+}
+
+.fifth-message-img {
+  position: absolute;
+  top: 441px;
+  left: 73px;
+}
+
+/* Форма отправки сообщений */
+.visually-hidden {
+  visibility: hidden;
+}
+
+.input__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.label-submit-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  height: 149px;
+  resize: none;
+}
+
+.submit-message-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin-top: 2px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  margin-right: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 129px;
+  width: 578px;
+  resize: none;
+  border-width: 0;
+  border-radius: 4px;
+  background-color: #FFF;
+}
+
+.submit-message-item:focus {
+  outline: inset 2px solid black;
+}
+
+.submit-btn {
+  display: inline-block;
+  margin-left: 20px;
+  padding: 6px 22px px 22px;
+  width: 144px;
+  height: 41px;
+  font-family: 'Proxima_novabold';
+  font-size: 16px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  border: transparent solid 1px;
+  border-radius: 21px;
+  background-color: #0F54B9;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: rgba(153, 115, 243, 0.801);
+}
+
+.submit-btn:focus {
+  outline: none;
+  border: 2px solid white;
+}
