@@ -123,6 +123,19 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.section-events__list-item').style.marginBottom = '20px';
   });
 
+  // Тултипы в проектах
+  // document.querySelector('#btn__comment1').addEventListener('click', function () {
+  //   document.querySelector('#comment1').classList.toggle('visible');
+  // });
+
+  // document.querySelector('#btn__comment2').addEventListener('click', function () {
+  //   document.querySelector('#comment2').classList.toggle('visible');
+  // });
+
+  // document.querySelector('#btn__comment3').addEventListener('click', function () {
+  //   document.querySelector('#comment3').classList.toggle('visible');
+  // });
+
   // Swiper-initializing
   new Swiper('.image-slider', {
     navigation: {
@@ -201,8 +214,8 @@ document.addEventListener('DOMContentLoaded', function () {
       type: "fraction",
     },
     navigation: {
-      nextEl: ".editions__swiper-button-next",
-      prevEl: ".editions__swiper-button-prev",
+      nextEl: ".section-editions__swiper-button-next",
+      prevEl: ".section-editions__swiper-button-prev",
     },
     
     a11y: {
@@ -216,6 +229,29 @@ document.addEventListener('DOMContentLoaded', function () {
       containerMessage: '',
       containerRoleDescriptionMessage: '',
       itemRoleDescriptionMessage: '',
+    },
+  });
+
+  let swiperEditionsPartners = new Swiper(".section-projects__slider", {
+    slidesPerView: 2,
+    spaceBetween: 50,
+    watchSlidesVisibility: true,
+
+    breakpoints: {
+      // when window width is >= 320px
+      1700: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".section-projects__swiper-button-next",
+      prevEl: ".section-projects__swiper-button-prev",
     },
   });
 });
