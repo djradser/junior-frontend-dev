@@ -52,9 +52,9 @@
           <a href="#" aria-label="Войти" class="enter-image-link">Войти</a>
           <form class="header__search-mobile">
             <input type="text" placeholder="" class="header__search-mobile-input">
-            <button type="button" type="submit" class="header__search-mobile-button"></button>
+            <button type="submit" class="header__search-mobile-button"></button>
           </form>
-          <button type="button" type="button" class="search__cross" aria-label="Закрыть поиск"></button>
+          <button class="search__cross" aria-label="Закрыть поиск"></button>
         </div>
         </div>
       </div>
@@ -64,7 +64,7 @@
             <nav class="nav header__menu">
               <ul class="header__menu-list"> 
                 <li class="header__menu-item">
-                  <button type="button" type="button" class="header__menu-button menu__link--drop">Реализм</button>
+                  <button class="header__menu-button menu__link--drop">Реализм</button>
                   <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
                     <li class="dropdown-list__item">
                       <a href="#" class="dropdown-list__link">Тинторетто</a>
@@ -84,8 +84,8 @@
                   </ul> 
                 </li>
                 <li class="header__menu-item">
-                  <button type="button" type="button" class="header__menu-button menu__link--drop">Импрессионизм</button>
-                  <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
+                  <button class="header__menu-button menu__link--drop">Импрессионизм</button>
+                  <ul id="second-dropdown" class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
                     <li class="dropdown-list__item">
                       <a href="#" class="dropdown-list__link">Моне</a>
                     </li>
@@ -104,7 +104,7 @@
                   </ul> 
                 </li>
                 <li class="header__menu-item">
-                  <button type="button" type="button" class="header__menu-button menu__link--drop">Постимпрессионизм</button>
+                  <button class="header__menu-button menu__link--drop">Постимпрессионизм</button>
                   <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
                     <li class="dropdown-list__item">
                       <a href="#" class="dropdown-list__link">Ван Гог</a>
@@ -124,7 +124,7 @@
                   </ul> 
                 </li>
                 <li class="header__menu-item">
-                  <button type="button" type="button" class="header__menu-button menu__link--drop">Авангард</button>
+                  <button class="header__menu-button menu__link--drop">Авангард</button>
                   <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
                     <li class="dropdown-list__item">
                       <a href="#" class="dropdown-list__link">Малевич</a>
@@ -144,7 +144,7 @@
                   </ul> 
                 </li>
                 <li class="header__menu-item">
-                  <button type="button" type="button" class="header__menu-button menu__link--drop">Футуризм</button>
+                  <button class="header__menu-button menu__link--drop">Футуризм</button>
                   <ul class="header__menu-list menu__list--dropdown dropdown-list custom-scroll" data-simplebar>
                     <li class="dropdown-list__item">
                       <a href="#" class="dropdown-list__link">Боччони</a>
@@ -165,9 +165,9 @@
                 </li>
               </ul>
             </nav>
-            <form tabindex="0" class="header__search">
+            <form class="header__search">
               <input type="text" placeholder="Поиск по сайту" class="header__search-input">
-              <button type="button" type="submit" class="header__search-button"></button>
+              <button type="submit" class="header__search-button"></button>
             </form>
           </div>
         </div>
@@ -179,13 +179,14 @@
       <div class="section-hero__bkg"></div>
       <div class="container section-hero__container">
           <div class="section-hero__content">
-            <h1 class="section-hero__heading">
+            <h1 class="visually-hidden">Visually-hidden-H1</h1>
+            <h2 class="section-hero__heading">
               Прикоснитесь к прекрасному
-            </h1>
+            </h2>
             <p class="section-hero__description">
               Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
             </p>
-            <a role="button" aria-label="Подписаться на рассылку" href="#footer" class="section-hero__btn">
+            <a href="#footer" class="section-hero__btn">
               Подписаться на рассылку
             </a>
           </div>
@@ -209,9 +210,9 @@
           </h2>
           <p class="select-description">Фильтровать по:</p>
           <select name="Автор" id="selectCustom">
-            <option value="Автор"></option>
-            <option value="Направление"></option>
-            <option value="Техника"></option>
+            <option label="Автор" value="Автор"></option>
+            <option label="Направление" value="Направление"></option>
+            <option label="Техника" value="Техника"></option>
           </select>
           <p class="gallery-description">
             Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <span class="text-highlighting">авторизуйтесь,</span> либо воспользуйтесь лицензией. 
@@ -4406,7 +4407,7 @@
         <div class="section-contacts__left-container">
           <h3 class="showroom__heading">Шоурум №4</h3>
           <div class="showroom__address">Леонтьевский переулок, дом 5, строение 1</div>
-          <form action="https://jsonplaceholder.typicode.com/posts" autocomplete method="POST" class="showroom__back-call">
+          <form action="https://jsonplaceholder.typicode.com/posts" autocomplete="on" method="POST" class="showroom__back-call">
             <h3 class="back-call__heading">Заказать обратный звонок</h3>
             <input name="Имя" type="text" placeholder="Имя*" data-validate-field="name" class="back-call__name">
             <input name="tel" type="tel" placeholder="Телефон*" data-validate-field="tel" data-validate-rules="phone" class="back-call__tel">
@@ -4414,10 +4415,10 @@
           </form>
           <div class="showroom__contacts-heading"> Связаться в один клик</div>
           <ul class="showroom__contacts">
-            <li role="listitem" class="showroom__contact-btn">
+            <li class="showroom__contact-btn">
               <a aria-label="whatsapp" href="#"></a>
             </li>
-            <li role="listitem" class="showroom__contact-btn">
+            <li class="showroom__contact-btn">
               <a aria-label="telegram" href="#"></a>
             </li> 
           </ul>
@@ -4438,13 +4439,13 @@
         <img src="./img/Blanchard-logo.svg" alt="Лого Blanchard">
       </picture>
       <ul class="footer__social-list">
-        <li role="listitem" class="footer__social-link-vk footer__social-link">
+        <li class="footer__social-link-vk footer__social-link">
           <a aria-label="vk" href="#"></a>
         </li>
-        <li role="listitem" class="footer__social-link-instagram footer__social-link">
+        <li class="footer__social-link-instagram footer__social-link">
           <a aria-label="intagram" href="#"></a>
         </li>
-        <li role="listitem" class="footer__social-link-fb footer__social-link">
+        <li class="footer__social-link-fb footer__social-link">
           <a aria-label="facebook" href="#"></a>
         </li>
       </ul>
